@@ -1,0 +1,81 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 80vh;
+}
+.header{
+
+    background-color: rgb(233, 233, 233);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.composeButton{
+    border: 0px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    background-color: rgb(233, 233, 233);
+}
+
+.composeButton:hover{
+    transform: scale(1.1);
+}
+
+.composeButton a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    color: black;
+}
+
+.home-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.h2-home{
+    text-transform: capitalize;
+}
+
+
+.nav-link{
+    color: rgb(0, 0, 0);
+}
+
+
+#footer-div{
+    width: 100%;
+    text-align: center;
+} 
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.titleInput{
+    border-radius: 10px;
+    height: 60px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.postInput{
+    border-radius: 10px;
+    height: 110px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.postButton{
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(237, 237, 237);
+}

@@ -1,0 +1,14 @@
+<%- include('header.ejs') %>
+
+<main>
+
+    <h1>What Happened Today...</h1>
+    <form action="/" method="post">
+        <input class="titleInput" type="text" name="todayTitle" placeholder="Title"  autocomplete="off">
+        <textarea class="postInput"  name="todayContent" placeholder="What's In Your Mind..."  autocomplete="off"></textarea>
+        <button class="postButton" type="submit">Post</button>
+    </form>
+
+</main>
+
+<%- include('footer.ejs') %>
