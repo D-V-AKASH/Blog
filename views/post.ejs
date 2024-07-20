@@ -1,9 +1,45 @@
 <%- include('header') %>
 
 <main>
-    <h2><%=composeTitlePost %> </h2> 
-    <p ><%= composeContentPost %></p>        
+
+    <div class="postPage">
+
+        <h2 id="h2Id" data-name="<%- selectedPostId %>"></h2>
+  
+        <div class="postHeader">
+
+            <form class="previousForm" action="/previous" method="post">
+                <input type="hidden" name="inputPrevious" id="previousInputId">
+                <button class="previousButton" type="submit" <%= previousStatus %>> < </button>
+            </form>    
+    
+            <h2 class="postTitle"><%= composeTitlePost %> - <%= currentPostDate %></h2>
+    
+            <form class="nextForm" action="/next" method="post">
+                <input type="hidden" name="inputNext" id="nextInputId">
+                <button class="nextButton" type="submit" <%= nextStatus %>> > </button>
+            </form>
+
+        </div>
+
+        <p class="postContent"><%=composeContentPost  %></p>
+
+    </div>
+ 
+
 </main>
+
+<script>
+      // Select the <h2> element
+      const heading = document.getElementById('h2Id');
+      
+      // Get the value of the 'data-name' attribute
+      const dataName = heading.getAttribute('data-name');
+      
+      // Set the value of the hidden input fields to the data-name value
+      document.getElementById('previousInputId').value = dataName;
+      document.getElementById('nextInputId').value = dataName;
+  </script>
 
 <%- include('footer') %>
 

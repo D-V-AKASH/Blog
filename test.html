@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .arrow {
+            font-size: 2em;
+            cursor: pointer;
+            user-select: none;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: #555;
+        }
+
+        .journal-entry {
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="arrow left" onclick="navigateTo('previous')">&#9664;</div>
+        <div class="journal-entry">
+            <h1>Journal Entry for <span id="date"></span></h1>
+            <p id="content">[Journal content goes here]</p>
+        </div>
+        <div class="arrow right" onclick="navigateTo('next')">&#9654;</div>
+    </div>
+
+    <button visible>check</button>
+    <button visible>check</button>
+
+    <script>
+        const journalEntries = {
+            "2024-07-10": "Content for July 10, 2024",
+            "2024-07-11": "Content for July 11, 2024",
+            "2024-07-12": "Content for July 12, 2024"
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentDate = urlParams.get('date') || new Date().toISOString().split('T')[0];
+
+        document.getElementById('date').textContent = currentDate;
+        document.getElementById('content').textContent = journalEntries[currentDate] || "No entry for this date.";
+
+        function navigateTo(direction) {
+            let date = new Date(currentDate);
+            if (direction === 'previous') {
+                date.setDate(date.getDate() - 1);
+            } else if (direction === 'next') {
+                date.setDate(date.getDate() + 1);
+            }
+            currentDate = date.toISOString().split('T')[0];
+            window.location.search = `?date=${currentDate}`;
+        }
+    </script>
+</body>
+</html>

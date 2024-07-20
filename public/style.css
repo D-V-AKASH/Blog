@@ -1,23 +1,62 @@
+body{
+    background-color: #cfb08f;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+}
 
 main{
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    height: 80vh;
+    padding-left: 20px;
+    margin: 40px 0;
+    min-height: 100vh;
 }
 .header{
 
     background-color: rgb(233, 233, 233);
     width: 100%;
     border-radius: 10px;
+    background-color: #E5D3B3;
+}
+
+.header-div{
+    margin: 10px;
+}
+
+.header-div .header{
+    padding-right: 20px;
+}
+
+.nav-link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    transform: scale(1.1);
+    color: rgb(178, 151, 116);
+}
+
+.footer-container{
+    border-top: 1px solid grey;
+    margin-top: auto;
+}
+
+.home-para{
+    display: flex;
+    min-width: 500px;
+    max-width: 1000px;
+    
 }
 
 .composeButton{
-    border: 0px solid black;
+    border: none;
     border-radius: 10px;
     padding: 10px;
     width: 150px;
-    background-color: rgb(233, 233, 233);
+    background-color: #664229;
+    margin-right: 20px;
 }
 
 .composeButton:hover{
@@ -26,8 +65,7 @@ main{
 
 .composeButton a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    color: black;
+    color: #E5D3B3;
 }
 
 .home-top{
@@ -37,20 +75,9 @@ main{
     margin-bottom: 20px;
 }
 
-.h2-home{
+.h2-home,.postTitle{
     text-transform: capitalize;
 }
-
-
-.nav-link{
-    color: rgb(0, 0, 0);
-}
-
-
-#footer-div{
-    width: 100%;
-    text-align: center;
-} 
 
 form{
     display: flex;
@@ -79,3 +106,62 @@ form{
     border-radius: 20px;
     background-color: rgb(237, 237, 237);
 }
+
+.noData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.noDataHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previousButton{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(92, 74, 62, 0.667);
+}
+
+.nextButton{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(92, 74, 62, 0.667);
+}
+
+.previousStatus{
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin-right: 20px;
+    border-radius: 100px;
+    background-color: rgba(92, 74, 62, 0.667);
+}
+
+.nextStatus{
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin-left: 20px;
+    border-radius: 100px;
+    background-color: rgba(92, 74, 62, 0.667);
+}
+
+.postContent{
+    margin: 30px;
+    font-size: 1.2rem;
+}
+

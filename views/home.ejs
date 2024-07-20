@@ -7,14 +7,14 @@
             <h1>Home page</h1>
             <button class="composeButton"><a href="/compose">Compose</a></button>
         </div>
-        <div>
+        <div class="home-para">
             <p><%= firstPara %></p>
         </div>
     </div>    
-
+    
     <% posts.forEach(post => { %>
-        <h2 class="h2-home"><%= post.composeTitle %></h2> 
-        <p class="p-home"><%= post.composeContent.substring(0, 100) + "..." %> <a href="/posts/<%= post.composeTitle %>">Read More</a> </p>
+        <h2 class="h2-home"><%= post.composeTitle %> - <%= post.todayDate %></h2> 
+        <p class="p-home"><%= post.composeContent.substring(0, 100) + "..." %> <a href="/posts/<%= post.composeTitle %>" style="text-decoration: none; color: rgb(173, 224, 236);">Read More</a> </p>
     <% }) %>
 
 </main>
