@@ -2,21 +2,35 @@
 
 <main>
 
-    <div>
-        <div class="home-top">
-            <h1>Home page</h1>
-            <button class="composeButton"><a href="/compose">Compose</a></button>
+    <div class="home-top">
+        <div>
+            <img class="home-content-bg" src="../images/abstract2.png" alt="image">
         </div>
-        <div class="home-para">
-            <p><%= firstPara %></p>
-        </div>
-    </div>    
+        <div class="home-content">
+            <div>
+                <h1>Home page</h1>
+            </div>
+            <div class="home-para">
+                <p><%= firstPara %></p>
+            </div>
+        </div>    
     
-    <% posts.forEach(post => { %>
-        <h2 class="h2-home"><%= post.composeTitle %> - <%= post.todayDate %></h2> 
-        <p class="p-home"><%= post.composeContent.substring(0, 100) + "..." %> <a href="/posts/<%= post.composeTitle %>" style="text-decoration: none; color: rgb(173, 224, 236);">Read More</a> </p>
-    <% }) %>
+        <div>
+            <img class="click" src="../images/click.png" alt="image">
+        </div>
+        <button class="composeButton"><a href="/compose">New Day!</a></button>
+    </div>
+    
+    <div class="new-posts">
+        <% posts.forEach(post => { %>
+            <div class="each-post">
+                <h2 class="h2-home"><%= post.composeTitle %> - <%= post.todayDate %></h2> 
+                <p class="p-home"><%= post.composeContent.substring(0, 100) + "..." %> <a href="/posts/<%= post.composeTitle %>" style="text-decoration: none; color: #a7e6f6;">Full Post</a> </p>        
+            </div>
+        <% }) %>
+    </div>
 
+   
 </main>
 
 <%- include('footer.ejs') %>

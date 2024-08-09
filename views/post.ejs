@@ -1,11 +1,10 @@
 <%- include('header') %>
 
-<main>
-
+<main class="post-main">
     <div class="postPage">
 
         <h2 id="h2Id" data-name="<%- selectedPostId %>"></h2>
-  
+
         <div class="postHeader">
 
             <form class="previousForm" action="/previous" method="post">
@@ -22,10 +21,12 @@
 
         </div>
 
+
+        <img class="plant1" src="../images/plant1.png" alt="plant">
+        <img class="plant3" src="../images/plant3.png" alt="plant">
         <p class="postContent"><%=composeContentPost  %></p>
 
-    </div>
- 
+    </div> 
 
 </main>
 
