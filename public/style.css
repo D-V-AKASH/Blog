@@ -31,16 +31,15 @@ body::before {
     background-image: url('./images/finalBg.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1300px 700px;
+    background-size: cover;
     background-attachment: fixed;    
-    filter: blur(0px) grayscale(2%) brightness(90%); 
     z-index: -1; 
 }
 
 .home-content{
     font-family: 'architect';
     font-size: 14px;
-    font-weight: 10px;
+    font-weight: 200;
     width: 700px;
     height: 253px;
     margin: 10px;
@@ -51,8 +50,52 @@ body::before {
     width: 831px;
     height: 563px;
     position: absolute;
-    top: 10px;
+    top: 50px;
     left: -40px;
+    z-index: -1;
+}
+
+.home-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.click{
+    width: 150px;
+    height: 150px;
+}
+
+.composeButton{
+   
+    position: relative;
+    top: 5px;
+    right: 120px;
+    width: 150px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.composeButton a {
+    font-family: 'architect';
+    text-decoration: none;
+    color: #916643;
+}
+
+.composeButton::before{
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    background-image: url('./images/paint\ stroke1.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 170px 60px; 
+    width: 160px;
+    height: 150px;
     z-index: -1;
 }
 
@@ -67,16 +110,16 @@ body::before {
 
 .contact-content-bg{
     width: 891px;
-    height: 543px;
+    height: 743px;
     position: absolute;
-    top: 50px;
-    left: -60px;
+    top: -10px;
+    left: -90px;
     z-index: -1;
 }
 
 .about-content{
     font-family: 'architect';
-    font-size: 14px;
+    font-size: 30px;
     width: 690px;
     height: 250px;
     margin: 20px;
@@ -87,7 +130,7 @@ body::before {
     width: 860px;
     height: 700px;
     position: absolute;
-    top: 11px;
+    top: 10px;
     left: -65px;
     z-index: -1;
 }
@@ -107,7 +150,6 @@ main{
     margin: 40px 0;
     min-height: 100vh;
 }
-
 
 .main-title{
     width: 100%;
@@ -134,7 +176,6 @@ main{
     background-position: center;
     background-size: 1500px 200px;
     background-repeat: no-repeat;
-
 }
 
 .nav-link{
@@ -152,7 +193,7 @@ main{
 .each-post{
     font-family: 'architect';
     font-size: 14px;
-    font-weight: 10px;
+    font-weight: 200;
     margin: 20px 10px;
     width: 80%;
     max-width: 600px;
@@ -164,58 +205,11 @@ main{
     line-height: 1.6; 
 }
 
-footer{
-    border-top: 1px solid grey;
-    margin-top: auto;
-    background-color: #e6c7a2;
-    height: 50px;
-}
-
 .home-para,.about,.contact{
     display: flex;
     max-width: 800px;
-
-}
-
-.click{
-    position: absolute;
-    top: 160px;
-    right: 70px;
-    width: 150px;
-    height: 150px;
-}
-
-.composeButton{
-   
-    background: none;
-    position: absolute;
-    top: 220px;
-    right: 30px;
-    border: none;
-    border-radius: 10px;
-    margin-right: 20px;
-    width: 150px;
-    height: 30px;
-}
-
-.composeButton a {
-    font-family: 'architect';
-    text-decoration: none;
-    color: #916643;
-}
-
-.composeButton::before{
-    content: "";
-    width: 170px;
-    height: 150px;
-    background-image: url('./images/paint\ stroke1.png'); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 180px 60px; 
-    position: absolute;
-    top: -60px;
-    right: -10px;
-    z-index: -1;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 .h2-home{
@@ -231,17 +225,15 @@ form{
 .composeTitle{
     font-family: 'architect';
     font-size: 32px;
-    color: white;
 }
 
 .titleInput{
     border-radius: 10px;
     height: 60px;
-    width: 450px;
+    width: 50%;
     border: none;
     padding: 20px;
     background-color: rgb(235, 225, 216);
-
 }
 
 .titleInput::placeholder{
@@ -252,7 +244,7 @@ form{
 
 .postInput{
     border-radius: 10px;
-    width: 900px;
+    width: 80%;
     height: 150px;
     border: none;
     padding: 20px;
@@ -313,6 +305,7 @@ form{
     font-size: 55px;
     font-weight: 500;
     text-transform: capitalize;
+    margin-left: 20px;
 }
 
 .postContent{
@@ -324,6 +317,14 @@ form{
     margin: 30px;
     width: 700px;
     background-color: papayawhip;
+}
+
+.previousForm{
+    margin-right: 20px;
+}
+
+.nextForm{
+    margin-left: 20px;
 }
 
 .postContent p{
@@ -357,18 +358,28 @@ form{
 .quote2{
     position: absolute;
     top: 230px;
-    right: 430px;
+    right: 230px;
     width: 250px;
     height: 100px;
 }
 
+footer{
+    border-top: 1px solid grey;
+    margin-top: auto;
+    background-color: #e6c7a2;
+    height: 50px;
+}
 
 @media only screen and (max-width: 767px) {
 
     body{
         margin: 0;
         padding: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
+    
 
     body::before {
         content: "";
@@ -382,7 +393,6 @@ form{
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;    
-        filter: blur(0px) grayscale(2%) brightness(90%); 
         z-index: -1;     
     }
 
@@ -399,45 +409,48 @@ form{
         justify-content: center;
         flex-wrap: nowrap;
     }
-
+    
     .home-content-bg{
-        width: 530px;
+        width: 523px;
         height: 433px;
         position: absolute;
-        top: 150px;
+        top: 200px;
         left: -40px;
         z-index: -1;
     }
 
     .home-top{
-        height: 280px;
-        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .home-content{
         font-family: 'architect';
         font-size: 14px;
-        font-weight: 10px;
-        width: 93%;
-        height: 128px;
-        margin: 30px;
-        padding:1px;
+        font-weight: 200;
+        width: 95%;
+        height: fit-content;
+        margin: 10px;
     }
 
     .contact-content{
         font-family: 'architect';
         font-size: 14px;
-        width: 550px;
-        height: 43px;
+        width: 430px;
         margin: 20px;
         padding:15px;
     }
     
+    .contact-content p, .about-content p{
+        margin-top: 30px;
+    }
+
     .contact-content-bg{
-        width: 690px;
-        height: 383px;
+        width: 540px;
+        height: 480px;
         position: absolute;
-        top: 150px;
+        top: 120px;
         left: -60px;
         z-index: -1;
     }
@@ -445,66 +458,63 @@ form{
     .about-content{
         font-family: 'architect';
         font-size: 14px;
-        width: 550px;
-        height: 50px;
+        width: 430px;
         margin: 20px;
-        padding:25px;
+        padding:15px;
     }
     
     .about-content-bg{
-        width: 700px;
-        height: 550px;
+        width: 500px;
+        height: 683px;
         position: absolute;
-        top: 100px;
-        left: -65px;
+        top: 130px;
+        left: -45px;
         z-index: -1;
     }
 
     .home-para{
         margin-top:  20px;
         margin-bottom: 30px;
-        max-height: 250px;
+        max-height: fit-content;
         overflow: hidden;   
     }
     
     .click{
-        position: absolute;
-        top: 180px;
-        right: 70px;
+        position: relative;
         width: 150px;
         height: 150px;
+        top: 20px;
+        right: 10px;
     }
     
     .composeButton{
-   
         background: none;
-        position: absolute;
-        top: 240px;
-        right: 30px;
+        position: relative;
+        top: -65px;
+        right: -10px;
         border: none;
         border-radius: 10px;
         margin-right: 20px;
-        width: 130px;
         height: 10px;
     }
 
     .composeButton::before{
         content: "";
+        position: absolute;
+        top: -50px;
+        right: 0px;
         width: 150px;
         height: 130px;
         background-image: url('./images/paint\ stroke1.png'); 
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 130px 50px; 
-        position: absolute;
-        top: -60px;
-        right: -10px;
+        background-size: 130px 55px; 
         z-index: -1;
     }
    
    .postInput{
         border-radius: 10px;
-        width: 500px;
+        width: 90%;
         height: 150px;
         border: none;
         padding: 20px;
@@ -514,7 +524,7 @@ form{
    .titleInput{
         border-radius: 10px;
         height: 60px;
-        width: 300px;
+        width: 70%;
         border: none;
         padding: 20px;
         background-color: rgb(235, 225, 216);
@@ -522,36 +532,28 @@ form{
     }
 
     .quote2{
-        position: absolute;
-        top: 680px;
-        left: 0px;
-        width: 250px;
-        height: 100px;
-    }
-
-    .quote5{
-        position: absolute;
-        top: 250px;
-        left: 370px;
-        width: 150px;
-        height: 70px;
+        position: relative;
+        top: 300px;
+        left: 50px;
     }
 
     .quote4{
-        position: absolute;
-        top: 400px;
-        left: 300px;
-        width: 350px;
-        height: 350px;
-        z-index: -1;
+       display: none;
     }
-    
+
+    .quote5{
+        position: relative;
+        top: 30px;
+        left: 250px;
+    }
+        
     .composeTitle{
         margin-top: 70px;
+
     }
 
     .new-posts{
-        margin-top: 70px;
+        margin-top: -40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -564,7 +566,8 @@ form{
         font-weight: 500;
         text-transform: capitalize;
         margin-top: 0px;
-        
+        margin-left: 30px;
+       
     }
     
     .postContent{
@@ -583,34 +586,24 @@ form{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 500px;
+        width: 430px;
         margin-top: 40px;
     }
-    
-}
 
-@media screen and (min-width:767px) and (max-width:880px){
-
-    .main-header{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .previousForm{
+        margin-right: 20px;
     }
 
-    .nav{
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
-    }
+
 }
 
-@media screen and (min-width:768px) and (max-width:1300px) {
+
+ @media screen and (min-width:768px) and (max-width:1073px) {
 
     body{
         margin: 0;
         padding: 0;
+        position: relative;
     }
     
     
@@ -626,24 +619,73 @@ form{
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;    
-        filter: blur(0px) grayscale(2%) brightness(90%); 
         z-index: -1; 
     }
 
-    
+    .main-header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
 
     .home-content{
         font-family: 'architect';
         font-size: 14px;
-        font-weight: 10px;
-        width: 650px;
-        height: 228px;
-        margin: 30px;
+        font-weight: 200;
+        width: 550px;
+        height: 188px;
+        margin: 10px;
+        margin-right: 0px;
+        margin-bottom: 70px;
         padding:1px;
     }
 
     .home-content-bg{
-        width: 831px;
+        width: 790px;
+        height: 520px;
+        position: absolute;
+        top: 70px;
+        left: -40px;
+        z-index: -1;
+    }
+
+    .contact-content{
+        font-family: 'architect';
+        font-size: 14px;
+        width: 600px;
+        height: 223px;
+        margin: 20px;
+        padding:25px;
+    }
+
+    .contact-content-bg{
+        width: 790px;
+        height: 563px;
+        position: absolute;
+        top: 60px;
+        left: -40px;
+        z-index: -1;
+    }
+
+    .about-content{
+        font-family: 'architect';
+        font-size: 14px;
+        width: 600px;
+        height: 250px;
+        margin: 20px;
+        padding:25px;
+    }
+
+    .about-content-bg{
+        width: 790px;
         height: 563px;
         position: absolute;
         top: 60px;
@@ -656,10 +698,101 @@ form{
         max-width: 400px;
         height: auto;
     }
-}
+
+    .home-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .home-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .click {
+        width: 150px;      
+        height: 150px;
+        position: relative;
+        right: 20px;
+    }
+
+    .composeButton {
+        position: relative;
+        margin-top: 20px;
+        margin-right: 0px;  
+        right: 0px;  
+        top: -105px;        
+        width: 150px;
+        height: 30px;
+        background: none;
+        border: none;
+    }
+
+    .composeButton::before{
+        content: "";
+        position: absolute;
+        top: -55px;
+        right: 6px;
+        width: 150px;
+        height: 130px;
+        background-image: url('./images/paint\ stroke1.png'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 150px 60px; 
+        z-index: -1;
+    }
+    
+    .postHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 700px;
+    }
+
+    .previousForm{
+        margin-right: 30px;
+    }
+
+    .quote4{
+        position: absolute;
+        top: 310px;
+        left: 350px;
+        width: 350px;
+        height: 350px;
+        z-index: -1;
+    }
+    
+    .quote5{
+        position: absolute;
+        top: 180px;
+        left: 350px;
+        width: 150px;
+        height: 70px;
+    }
+    
+    .quote2{
+        position: absolute;
+        top: 230px;
+        right: 50px;
+        width: 250px;
+        height: 100px;
+    }
+
+    .postInput{
+        border-radius: 10px;
+        width: 90%;
+        height: 150px;
+        border: none;
+        padding: 20px;
+        background-color: rgb(235, 225, 216);;  
+    }   
+} 
 
 
-@media screen and (min-width: 1300px) and (max-width:2358px) {
+/* @media screen and (min-width: 1024px){
 
     body{
          
@@ -681,9 +814,18 @@ form{
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;    
-        filter: blur(0px) grayscale(2%) brightness(90%); 
         z-index: -1; 
     }
 
+    .header-div{
     
-}
+        margin: 20px 20px;
+        border-radius: 20px;
+        background-image: url('./images/headerBg.png');
+        background-position: center;
+        background-size: 2500px 400px;
+        background-repeat: no-repeat;
+    }
+
+    
+} */
