@@ -9,7 +9,12 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use( express.static( 'public'));
 
-mongoose.connect('mongodb+srv://dvakash:dvakashmitu369mongodb@cluster0.fewkq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0journalDb');
+const mongoURI = 'mongodb+srv://dvakash:dvakashmitu369mongodb@cluster0.fewkq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0journalDb';
+
+mongoose.connect(mongoURI)
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
+
 
 const journalSchema = mongoose.Schema({
     composeTitle: {
