@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use( express.static( 'public'));
 
-mongoose.connect('mongodb://localhost:27017/journalDb');
+mongoose.connect('mongodb+srv://dvakash:dvakashmitu369mongodb@cluster0.fewkq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0journalDb');
 
 const journalSchema = mongoose.Schema({
     composeTitle: {
@@ -179,7 +179,7 @@ app.post("/next", function(req,res){
 
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("port listens");
 });
 
