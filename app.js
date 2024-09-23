@@ -11,7 +11,7 @@ app.use( express.static( 'public'));
 
 const mongoURI = 'mongodb+srv://dvakash:dvakashmitu369mongodb@cluster0.fewkq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0journalDb';
 
-mongoose.connect(mongoURI)
+mongoose.connect(mongoURI,{serverSelectionTimeoutMS: 15000, socketTimeoutMS: 45000, })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
