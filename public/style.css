@@ -444,6 +444,7 @@ footer{
     
     .contact-content p, .about-content p{
         margin-top: 30px;
+        font-size: 1rem;
     }
 
     .contact-content-bg{
@@ -477,25 +478,47 @@ footer{
         margin-bottom: 30px;
         max-height: fit-content;
         overflow: hidden;   
+        font-size: 1rem;
+    }
+
+    .home-right{
+        position: absolute;
+        top: 130px;
+        right: 0px;
     }
     
     .click{
         position: relative;
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         top: 20px;
-        right: 10px;
+        right: -130px;
     }
     
     .composeButton{
         background: none;
         position: relative;
-        top: -65px;
-        right: -10px;
+        top: 25px;
+        right: -20px;
         border: none;
         border-radius: 10px;
         margin-right: 20px;
         height: 10px;
+        font-size: 15px;
+    }
+
+    .composeButton::before{
+        content: "";
+        position: absolute;
+        top: -8px;
+        right: 25px;
+        width:  100px;
+        height: 35px;
+        background-image: url('./images/paint\ stroke1.png'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100px 35px; 
+        z-index: -1;
     }
 
     .composeButton::before{
@@ -572,14 +595,18 @@ footer{
     
     .postContent{
         font-family: 'reality scene';
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 500;
         padding: 20px;
         border-radius: 20px;
         margin: 20px;
         width: 80%;
         background-color: papayawhip;
+    }
+
+    .postContent p{
         line-height: 40px;
+
     }
 
     .postHeader{
